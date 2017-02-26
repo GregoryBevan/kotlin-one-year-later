@@ -37,5 +37,6 @@ module.exports = {
     devServer: {
         noInfo: true,
         port: 8000
-    }
+    },
+    devtool: '#eval-source-map'
 };
