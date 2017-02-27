@@ -1,14 +1,15 @@
 // load css
 import './css/style.css';
 
+// load json
+import slides from './slides/slides.json';
+
 // load Reveal  
 import Reveal from 'reveal';
 
 var libPath = '../node_modules/reveal.js/';
 
-insertSlides().then(function() {
-    console.log("Slides loaded");
-});
+insertSlides();
 
 Reveal.initialize({
     width: '100%',
@@ -55,37 +56,18 @@ Reveal.initialize({
 });
 
 function insertSlides() {
-    return new Promise(function(resolve, reject) {
+    console.log('Insert following slides');
+    console.log(slides);
 
-        var request = new XMLHttpRequest();
+    var slideContainer = document.querySelector('.slides');
+    slides.forEach(slideLoader);
 
-        console.log('Insert slides');
-
-        request.onload = function() {
-            var slideContainer = document.querySelector('.slides');
-
-            function slideLoader(path) {
-                console.log('path:', path);
-                var chapter = document.createElement('section');
-                chapter.dataset.markdown = path;
-                chapter.dataset.vertical = '^\r?\n\r?\n\r?\n';
-                chapter.dataset.notes = '^Notes :';
-                slideContainer.appendChild(chapter);
-            }
-
-            console.log('start');
-            JSON.parse(request.responseText).forEach(slideLoader);
-            console.log('end');
-
-            resolve(slideContainer);
-        };
-
-        request.onerror = function(event) {
-            console.error(event);
-            reject('Erreur chargement des slides.');
-        };
-
-        request.open('GET', 'slides/slides.json');
-        request.send();
-    });
+    function slideLoader(path) {
+        var chapter = document.createElement('section');
+        chapter.dataset.markdown = 'slides/' + path;
+        chapter.dataset.separator = '^\n---\n';
+        chapter.dataset.vertical = '^\n\n';
+        chapter.dataset.notes = '^Notes :';
+        slideContainer.appendChild(chapter);
+    }
 }

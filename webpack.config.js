@@ -4,12 +4,12 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+    context: path.join(__dirname, 'src'),
     entry: {
-        app: './src/main.js',
+        app: './main.js',
     },
     output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
+        path: path.resolve(__dirname, 'dist'),
         filename: 'build.js'
     },
     externals: {
@@ -21,9 +21,10 @@ module.exports = {
         }
     },
     module: {
-        loaders: [
+        rules: [
             { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
-            { test: /\.(eot|svg|ttf|woff|woff2)$/, loaders: ['file-loader'] }
+            { test: /\.(eot|svg|ttf|woff|woff2)$/, loaders: ['file-loader'] },
+            { test: /\.json$/, loaders: ['json-loader'] }
         ]
     },
     plugins: [
@@ -38,5 +39,5 @@ module.exports = {
         noInfo: true,
         port: 8000
     },
-    devtool: '#eval-source-map'
+    devtool: '#eval-source-map      '
 };
