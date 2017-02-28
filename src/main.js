@@ -14,6 +14,20 @@ insertSlides();
 Reveal.initialize({
     width: '100%',
     height: '100%',
+    controls: false,
+    progress: false,
+    history: true,
+    center: true,
+    transition: 'convex', // default/cube/page/concave/zoom/linear/fade/none
+    backgroundTransition: 'fade',
+    rollingLinks: true,
+    slideNumber: false,
+    mouseWheel: false,
+    margin: 0,
+    theme: '../node_modules/reveal.js/css/theme/white.css',
+    markdown: {
+        smartypants: true
+    },
     dependencies: [
         // Cross-browser shim that fully implements classList
         {
@@ -68,6 +82,7 @@ function insertSlides() {
         chapter.dataset.separator = '^\n---\n';
         chapter.dataset.vertical = '^\n\n';
         chapter.dataset.notes = '^Notes :';
+        chapter.dataset.charset = 'utf-8';
         slideContainer.appendChild(chapter);
     }
 }

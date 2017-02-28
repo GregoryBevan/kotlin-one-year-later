@@ -1,5 +1,0 @@
-##intro
-
-Exemple de slide
-
----
