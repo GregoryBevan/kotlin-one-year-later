@@ -4,7 +4,7 @@ import './css/style.css';
 // load json
 import slides from './slides/slides.json';
 
-// load Reveal  
+// load Reveal
 import Reveal from 'reveal';
 
 var libPath = '../node_modules/reveal.js/';
@@ -77,12 +77,32 @@ function insertSlides() {
     slides.forEach(slideLoader);
 
     function slideLoader(path) {
-        var chapter = document.createElement('section');
-        chapter.dataset.markdown = 'slides/' + path;
-        chapter.dataset.separator = '^\n---\n';
-        chapter.dataset.vertical = '^\n\n';
-        chapter.dataset.notes = '^Notes :';
-        chapter.dataset.charset = 'utf-8';
-        slideContainer.appendChild(chapter);
+      if(path.endsWith(".md")) {
+        markdownLoader(path);
+      } else {
+        htmlLoader(path);
+      }
+    }
+
+    function markdownLoader(path) {
+      var chapter = document.createElement('section');
+      chapter.dataset.markdown = 'slides/' + path;
+      chapter.dataset.separator = '^\n---\n';
+      chapter.dataset.vertical = '^\n\n';
+      chapter.dataset.notes = '^Notes :';
+      chapter.dataset.charset = 'utf-8';
+      slideContainer.appendChild(chapter);
+    }
+
+    function htmlLoader(path) {
+      var link = document.createElement('link');
+      link.rel = 'import';
+      link.href = 'slides/' + path;
+      link.onload = function(e) {
+        console.log()
+        var post = this.import.querySelector('[id=\'' + path.replace('.html', '\'') +']');
+        slideContainer.appendChild(post.cloneNode(true));
+      };
+      document.head.appendChild(link);
     }
 }

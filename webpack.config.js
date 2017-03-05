@@ -32,7 +32,7 @@ module.exports = {
             template: './index.html'
         }),
         new CopyWebpackPlugin([
-            { from: { glob: 'slides/*.md' } }
+            { from: { glob: 'slides/*.*' } }
         ])
     ],
     devServer: {
