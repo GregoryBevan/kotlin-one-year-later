@@ -1,6 +1,6 @@
 ## And compile this program ?
 <br>
 ```zsh
-kotlinc hello.kt -include-runtime -d hello.jar
+kotlinc HelloWorld.kt -include-runtime -d hello-world.jar
 ```
 <br>

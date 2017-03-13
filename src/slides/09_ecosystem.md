@@ -1,7 +1,11 @@
 ## Ecosystem
 <br>
-- Spring, Spring boot, Reactor
+- Spring, Spring boot, Reactor<!-- .element: class="fragment" -->
 <br><br>
-- Next Vert.x version
+- Next Vert.x version<!-- .element: class="fragment" -->
 <br><br>
-- RxKotlin
+- RxKotlin<!-- .element: class="fragment" -->
+<br><br>
+- Spek, Mockito<!-- .element: class="fragment" -->
+<br><br>
+- Jackson<!-- .element: class="fragment" -->

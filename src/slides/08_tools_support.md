@@ -1,5 +1,5 @@
 ## Tools support
-<br><br>
+<br>
 - IntelliJ, of course<!-- .element: class="fragment" -->
 <br><br>
 - Eclipse, surprisingly good support (plugin developed by Jetbrains)<!-- .element: class="fragment" -->
