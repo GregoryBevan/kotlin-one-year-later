@@ -8,3 +8,7 @@
 <br><br>
 - Gradle Kotlin script : dls not yet supported<!-- .element: class="fragment" -->
 <br><br>
+
+Note:
+Il y a aussi Kobalt
+Gradle fonctionne bien, mais les scripts de build sont en erreur à cause de la non reconnaissance du dsl

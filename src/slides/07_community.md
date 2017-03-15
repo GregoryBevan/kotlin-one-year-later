@@ -8,3 +8,8 @@
 <br><br>
 - Lots of meetups and other events around the world<!-- .element: class="fragment" -->
 <br><br>
+
+Note:
+8132 dépôts
+Loin derrière Javascript et Java 323000 et 222000
+Première Kotlin conf les 2 et 3 novembre à San Francisco. Si Zenika veut envoyer quelqu'un je suis partant
