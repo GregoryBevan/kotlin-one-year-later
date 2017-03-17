@@ -25,6 +25,10 @@ Reveal.initialize({
     mouseWheel: false,
     margin: 0,
     theme: '../node_modules/reveal.js/css/theme/white.css',
+    keyboard: {
+        38: 'next',
+        40: 'prev'
+    },
     markdown: {
         smartypants: true
     },
