@@ -6,7 +6,7 @@
 <br><br>
 - Build tools : Gradle, Maven and even Ant<!-- .element: class="fragment" -->
 <br><br>
-- Gradle Kotlin script : dls not yet supported<!-- .element: class="fragment" -->
+- Gradle Kotlin script : dsl not yet supported<!-- .element: class="fragment" -->
 <br><br>
 
 Note:

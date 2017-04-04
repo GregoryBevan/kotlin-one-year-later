@@ -4,7 +4,7 @@
 <br><br>
 - Null safety or the end of NPE<!-- .element: class="fragment" -->
 <br><br>
-- Compatible with Java 6<!-- .element: class="fragment" -->
+- Compatible with JVM 6<!-- .element: class="fragment" -->
 <br><br>
 - Higher order functions<!-- .element: class="fragment" -->
 <br><br>
