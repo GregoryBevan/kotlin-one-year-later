@@ -9,7 +9,7 @@ module.exports = {
         app: './main.js',
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         filename: 'build.js'
     },
     externals: {
@@ -34,11 +34,12 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: { glob: 'slides/*.*' } },
             { from: { glob: 'images/*.*' } },
+            { from: '../node_modules/reveal.js', to: 'revealjs'}
         ])
     ],
     devServer: {
         noInfo: true,
-        port: 8000
+        port: 8100
     },
     devtool: '#eval-source-map      '
 };

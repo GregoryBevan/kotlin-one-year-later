@@ -7,7 +7,7 @@ import slides from './slides/slides.json';
 // load Reveal
 import Reveal from 'reveal';
 
-var libPath = '../node_modules/reveal.js/';
+var libPath = 'revealjs/';
 
 insertSlides();
 
@@ -24,7 +24,7 @@ Reveal.initialize({
     slideNumber: false,
     mouseWheel: false,
     margin: 0,
-    theme: '../node_modules/reveal.js/css/theme/white.css',
+    theme: 'revealjs/css/theme/white.css',
     keyboard: {
         38: 'next',
         40: 'prev'
