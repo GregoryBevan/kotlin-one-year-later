@@ -1,4 +1,4 @@
-## Have you already write this ?
+## Have you already written this ?
 <br>
 ```kotlin
 fun main(args: Array<String>) {
